@@ -11,6 +11,7 @@ What is the Elixir programming language?
 
 ## Elixir is:
 - *functional, immutable*
+- *pattern matching*
 - *concurrent*
 - *fault-tolerant*
 - *Erlang virtual machine*
@@ -30,6 +31,42 @@ What is the Elixir programming language?
 - Objects are not changed
 - Code is easier to test
 - Makes code thread safe, prevents concurrency bugs
+
+---
+
+## Pattern matching
+
+```
+iex> x = 1
+1
+iex> x
+1
+```
+
+```
+iex> 1 = x
+1
+iex> 2 = x
+** (MatchError) no match of right hand side value: 1
+```
+
+---
+
+## Multiple functions heads
+
+```
+iex> defmodule M do
+...> def foo(1), do: "one"
+...> def foo(2), do: "two"
+...> def foo(_), do: "I can't count that high"
+...> end
+iex> M.foo(1)
+"one"
+iex> M.foo(2)
+"two"
+iex> M.foo(3)
+"I can't count that high"
+```
 
 ---
 
