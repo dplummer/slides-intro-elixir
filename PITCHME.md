@@ -36,7 +36,7 @@ What is the Elixir programming language?
 
 ## Pattern matching
 
-```
+```elixir
 iex> x = 1
 1
 iex> x
@@ -54,7 +54,7 @@ iex> 2 = x
 
 ## Multiple functions heads
 
-```
+```elixir
 iex> defmodule M do
 ...> def foo(1), do: "one"
 ...> def foo(2), do: "two"
